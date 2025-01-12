@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(82, 171, 174);
+    margin: 0;
+}
+
+#navbar {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    background-color: rgb(69, 144, 147);
+}
+
+#navbar > div {
+    flex: 1;
+    margin: auto;
+}
+
+#navbar a {
+    font-size: 1.6rem;
+    font-family: monospace;
+    color: black;
+    text-decoration: none;
+}
+
+#navbar #center a {
+    font-size: 3rem;
+    font-family: "Funnel Display", serif;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#navbar #center a span {
+    font-size: 0.8em;
+    font-family: "Funnel Display", serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.welcome {
+    padding-top: 0px;
+    margin-top: 0px;
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.namecard {
+    padding: 2rem;
+    background-color: rgb(151, 183, 184);
+    border-radius: 1rem;
+}
+
+h1 {
+    font-family: "Funnel Display", serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: "Funnel Display", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
