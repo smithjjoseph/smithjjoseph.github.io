@@ -1,5 +1,11 @@
+:root {
+    --base-colour: rgb(82, 139, 174);
+    --dark-base: rgb(63, 105, 131);
+    --blue-gray: rgb(122, 160, 183);
+}
+
 body {
-    background-color: rgb(82, 171, 174);
+    background-color: var(--base-colour);
     margin: 0;
 }
 
@@ -9,7 +15,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 1rem;
-    background-color: rgb(69, 144, 147);
+    background-color: var(--dark-base);
 }
 
 #navbar > div {
@@ -34,10 +40,6 @@ body {
 
 #navbar #center a span {
     font-size: 0.8em;
-    font-family: "Funnel Display", serif;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: 600;
 }
 
 .welcome {
@@ -51,7 +53,7 @@ body {
 
 .namecard {
     padding: 2rem;
-    background-color: rgb(151, 183, 184);
+    background-color: var(--blue-gray);
     border-radius: 1rem;
 }
 
@@ -66,4 +68,18 @@ h2 {
     font-family: "Funnel Display", serif;
     font-size: 2rem;
     font-weight: 600;
+}
+
+.section-a {
+    background-color: var(--blue-gray);
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+}
+
+.section-b {
+    background-color: var(--base-colour);
+    display: flex;
+    height: 60vh;
+    justify-content: center;
 }
