@@ -1,21 +1,32 @@
 :root {
-    --base-colour: rgb(82, 139, 174);
+    --base-blue: rgb(82, 139, 174);
     --dark-base: rgb(63, 105, 131);
     --blue-gray: rgb(122, 160, 183);
+    --gray: rgb(108,121,125);
 }
 
 body {
-    background-color: var(--base-colour);
+    background-color: var(--base-blue);
     margin: 0;
 }
 
+h1,
+h2 {
+    font-family: "Funnel Display", serif;
+}
+
+a,
+p {
+    font-family: monospace;
+}
+
 #navbar {
-    height: 5vh;
+    background-color: var(--dark-base);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 5vh;
     padding: 1rem;
-    background-color: var(--dark-base);
 }
 
 #navbar > div {
@@ -24,18 +35,16 @@ body {
 }
 
 #navbar a {
-    font-size: 1.6rem;
-    font-family: monospace;
     color: black;
+    font-size: 1.6rem;
     text-decoration: none;
 }
 
 #navbar #center a {
-    font-size: 3rem;
-    font-family: "Funnel Display", serif;
     color: black;
-    text-decoration: none;
+    font-size: 3rem;
     font-weight: 600;
+    text-decoration: none;
 }
 
 #navbar #center a span {
@@ -43,43 +52,61 @@ body {
 }
 
 .welcome {
-    padding-top: 0px;
-    margin-top: 0px;
+    align-items: center;
     display: flex;
     height: 95vh;
     justify-content: center;
-    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .namecard {
-    padding: 2rem;
     background-color: var(--blue-gray);
     border-radius: 1rem;
+    padding: 2rem;
 }
 
 h1 {
-    font-family: "Funnel Display", serif;
     font-size: 4rem;
     font-weight: 800;
-    margin-top: 0;
+    margin: 0;
 }
 
 h2 {
-    font-family: "Funnel Display", serif;
     font-size: 2rem;
     font-weight: 600;
 }
 
+.section-a,
+.section-b {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    overflow: auto;
+}
+
 .section-a {
     background-color: var(--blue-gray);
-    display: flex;
-    height: 60vh;
-    justify-content: center;
 }
 
 .section-b {
-    background-color: var(--base-colour);
-    display: flex;
-    height: 60vh;
-    justify-content: center;
+    background-color: var(--base-blue);
+}
+
+.section-card {
+    background-color: var(--gray);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 10px;
+    width: 80vw;
+    font-size: 1rem;
+}
+
+.section-card img {
+    float: left;
+    padding-left: 5vw;
+    padding-right: 10vw;
+    height: 12vh;
 }
