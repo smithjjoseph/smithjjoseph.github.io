@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: projects
 title: Projects
 permalink: /projects/
 ---
 
-This page will be filled with my personal projects
+Here are some of the projects I've worked on and technologies I've experimented with:
