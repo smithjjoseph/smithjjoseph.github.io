@@ -1,0 +1,11 @@
+- name: "Joseph"
+  location: "Earth"
+  colour: "Blue"
+
+- name: "Tyrone"
+  location: "Jupiter"
+  colour: "Red"
+
+- name: "Shirley"
+  location: "Mars"
+  colour: "Purple"
