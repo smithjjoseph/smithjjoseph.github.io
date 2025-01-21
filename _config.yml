@@ -29,7 +29,6 @@ github_username:  smithjjoseph
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # Create front matter for images
