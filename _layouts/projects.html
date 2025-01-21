@@ -1,5 +1,6 @@
 ---
 layout: default
+show_excerpts: false
 ---
 <article class="post">
 
@@ -22,7 +23,7 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
+        {%- if layout.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
       </li>
