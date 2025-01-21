@@ -7,10 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 4.3.4"
-# Dependencies for the Minima theme (taken from minima's gemspec file):
-# gem "jekyll-feed","~> 0.9"
-# gem "jekyll-seo-tag", "~> 2.1"
+gem "jekyll", "~> 4.3.4"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
