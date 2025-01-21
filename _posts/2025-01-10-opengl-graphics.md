@@ -53,7 +53,7 @@ endif()
 add_executable(GLFW-CMake-starter WIN32 ${GLFW-CMAKE-STARTER-SRC} ${GLAD_GL})
 ```
 This would then be used with:
-```C++
+```c++
 /* Since the header only implementation is being used glad needs a guard
    https://github.com/Dav1dde/glad/wiki/C#header-only */
 #define GLAD_GL_IMPLEMENTATION
