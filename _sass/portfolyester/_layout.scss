@@ -137,13 +137,13 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+  width:         calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -175,24 +175,66 @@
 
 
 /**
- * Posts
+ * Page content
  */
-.post-header {
-  margin-bottom: $spacing-unit;
+.page-content {
+  // padding: $spacing-unit 0;
+  flex: 1;
 }
 
-.post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
+/**
+ * Home content
+ */
+.home-section {
+  min-height: 40vh;
+  padding: 10vh -webkit-calc(10% + $spacing-unit);
+  padding: 10vh         calc(10% + $spacing-unit);
 
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+  &:nth-child(even) {
+    background-color: $section-color-medium;
+  }
+
+  &:nth-child(odd) {
+    background-color: $section-color-dark;
+  }
+
+  h1 {
+    font-weight: bold;
+    color: $section-text-color;
+    @include relative-font-size(2.5);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
   }
 }
 
+.section-card {
+  color: $section-text-color;
+  padding: 2rem 0;
+  margin: $spacing-unit 0;
+
+  img {
+    float: left;
+    padding-left: 1vw;
+    padding-right: 10vw;
+    height: 12vh;
+  }
+  
+  p {
+    &:first-of-type {
+      @include relative-font-size(1.25);
+      font-weight: bold;
+    }
+  }
+}
+
+/**
+ * Project content
+ */
 .post-content {
   margin-bottom: $spacing-unit;
+  color: $section-text-color;
 
   h2 {
     @include relative-font-size(2);
@@ -219,59 +261,13 @@
   }
 }
 
-
-
-/**
- * Page content
- */
-.page-content {
-  // padding: $spacing-unit 0;
-  flex: 1;
+.project-section {
+  min-height: 80vh;
+  padding: 10vh -webkit-calc(20% + $spacing-unit);
+  padding: 10vh         calc(20% + $spacing-unit);
+  background-color: $section-color-medium;
 }
 
-// Home Section
-.home-section {
-  height: 40vh;
-  padding: $spacing-unit * 10;
-
-  &:nth-child(even) {
-    background-color: $section-color-medium;
-  }
-
-  &:nth-child(odd) {
-    background-color: $section-color-dark;
-  }
-
-  h1 {
-    font-weight: bold;
-    color: $section-text-color;
-    @include relative-font-size(2.5);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
-  }
-}
-
-.section-card {
-  background-color: var(--gray);
-  border-radius: 1rem;
-  color: $section-text-color;
-  padding: 2rem;
-  padding-left: 0;
-  margin: 10px;
-  width: 80vw;
-  font-size: 1rem;
-  
-  img {
-    float: left;
-    padding-right: 10vw;
-    height: 12vh;
-  }
-}
-
-
-// Project section
 .page-heading {
   @include relative-font-size(2);
 }
@@ -291,10 +287,26 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $text-color;
+  color: $section-text-color;
 }
 
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+  color: $link-text-color;
+}
+
+.post-header {
+  margin-bottom: $spacing-unit;
+  color: $section-text-color;
+}
+
+.post-title {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
 }

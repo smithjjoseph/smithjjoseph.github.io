@@ -107,24 +107,19 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $link-text-color;
   text-decoration: none;
 
   &:visited {
-    color: color.adjust($brand-color, $lightness: -15%);
+    color: color.adjust($link-text-color, $lightness: -10%);
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: color.adjust($link-text-color, $lightness: 5%);
   }
 
   .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
+    font-style: normal;
   }
 }
 
