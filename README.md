@@ -1,6 +1,41 @@
 # Portfolio website
 
-## Installation
+## Github Pages
+
+Initial version of site just used plain HTML and CSS files
+
+### Build from branch
+
+- Moved to using Jekyll for modularity, pluggins, and sass
+- Used 'build from branch' which used the Github Pages gem for continuous integration
+
+### Github Actions
+
+Main issue:
+- Development environment using Jekyll 4.3.4
+- Github Pages gem uses Jekyll 3.10.0
+
+Reasoning:
+- Remedied developement environment deprecation warnings relating to using @use and @forward instead of @import
+- Worked in development environment but broke the deployed website's styling
+- Updated the gemfile to use a specific version of Jekyll (same version as development environment)
+- Used Github Actions instead of 'build from branch' for continuous integration
+- Uses the default Jekyll workflow
+
+### DNS Configuration for custom URL
+
+Commands for checking DNS configuration as it can take up to 48 hours for changes to propagate - Use WSL for dig command
+
+`dig _github-pages-challenge-smithjjoseph.josephjamessmith.com +nostats +nocomments +nocmd TXT` \
+(Should display the inputted record)
+
+`dig example.com +nostats +nocomments +nocmd` \
+(Should point to GitHub's servers)
+
+`dig www.example.com +nostats +nocomments +nocmd` \
+(Should point to GitHub which should in turn point to GitHub's servers)
+
+## Development Environment Installation
 
 ### WSL
 
@@ -45,5 +80,5 @@ gem install jekyll bundler
 1. Activate the site using `bundle exec jekyll serve --livereload --force-polling`
    - `--livereload` to make live changes to site without needing to refresh
    - `--force-polling` may not be needed but for my installation seemed to be necessary
-   
-> NOTE: `--incremental` is used to enable incremental rebuilds (which speeds up subsequent builds) however this seems to not update the index page and therefore should only be used when editing blogs
+
+> NOTE: `--incremental` is used to enable incremental rebuilds (which speeds up subsequent builds) however this seems to not update the index page and therefore should only be used when editing posts
