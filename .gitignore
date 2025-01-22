@@ -1,7 +1,12 @@
+# Jekyll generated dirs
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
 
+# Development dirs
+vendor
+.vscode
+
+# Ruby Gems lockfile
 Gemfile.lock
