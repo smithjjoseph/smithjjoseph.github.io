@@ -5,6 +5,7 @@
  * Site header
  */
 .site-header {
+  background: $background-color-light;
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
@@ -109,6 +110,7 @@
  * Site footer
  */
 .site-footer {
+  background: $background-color-light;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
@@ -220,7 +222,7 @@
     padding-right: 10vw;
     height: 12vh;
   }
-  
+
   p {
     &:first-of-type {
       @include relative-font-size(1.25);
@@ -262,10 +264,8 @@
 }
 
 .project-section {
-  min-height: 80vh;
   padding: 10vh -webkit-calc(20% + $spacing-unit);
   padding: 10vh         calc(20% + $spacing-unit);
-  background-color: $section-color-medium;
 }
 
 .page-heading {
@@ -309,4 +309,12 @@
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+}
+
+/**
+ * Post content
+ */
+.post {
+  padding: 10vh -webkit-calc(20% + $spacing-unit);
+  padding: 10vh         calc(20% + $spacing-unit);
 }
