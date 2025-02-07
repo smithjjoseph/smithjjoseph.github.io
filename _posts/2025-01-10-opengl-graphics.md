@@ -1,8 +1,9 @@
 ---
 layout: post
+title: OpenGL-Graphics
+categories: projects
+permalink: /:categories/:title
 ---
-
-# GL-graphics
 
 This project uses CMake to create a project with [GLFW](https://www.glfw.org/)/[GLAD](https://github.com/Dav1dde/glad) for use with the [OpenGL](https://www.opengl.org/) specification. This project is designed to be multi-platform and runs on most C++ build systems including Windows, Linux and MacOS.
 
