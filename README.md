@@ -16,7 +16,7 @@ Main issue:
 - Github Pages gem uses Jekyll 3.10.0
 
 Reasoning:
-- Remedied developement environment deprecation warnings relating to using @use and @forward instead of @import
+- Remedied developement environment deprecation warnings relating to using `@use` and `@forward` instead of `@import`
 - Worked in development environment but broke the deployed website's styling
 - Updated the gemfile to use a specific version of Jekyll (same version as development environment)
 - Used Github Actions instead of 'build from branch' for continuous integration
