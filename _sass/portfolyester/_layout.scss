@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../abstracts/" as *;
 @use "base" as *;
 
@@ -14,6 +15,13 @@
   position: relative;
 }
 
+.site-title-img {
+  float: left;
+  height: $spacing-unit * 1.865;
+  width: $spacing-unit * 1.865;
+  padding-right: 10px;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
@@ -27,6 +35,14 @@
     color: $grey-color-dark;
   }
 }
+
+@include media-query($ultrathin) {
+  .site-title {
+    display: none;
+  }
+}
+
+// if width less than 300px hide title
 
 .site-nav {
   float: right;
@@ -55,8 +71,8 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit * 0.5;
-    background-color: $grey-color;
-    border: 1px solid $grey-color-light;
+    background-color: $background-color-light;
+    border: 1px solid $grey-color;
     border-radius: 5px;
     text-align: right;
 
@@ -190,32 +206,67 @@
  */
  
 .about-section {
+  display: flex;
+  align-content: center;
+
   min-height: 40vh;
   padding: 10vh -webkit-calc(20% + $spacing-unit);
   padding: 10vh         calc(20% + $spacing-unit);
   background-color: $section-color-dark;
+}
+
+.about-card {
+  color: $section-text-color;
+  padding: 2rem 0;
+  margin: $spacing-unit 0;
 
   h1 {
     font-weight: bold;
     color: $section-text-color;
     @include relative-font-size(2.5);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
   }
-}
- 
-.about-card {
-  color: $section-text-color;
-  padding: 2rem 0;
-  margin: $spacing-unit 0;
-  
+
   img {
     float: left;
     margin-right: 3vw;
+    margin-bottom: 1vh;
     height: 30vh;
     border-radius: 10px;
+  }
+}
+
+@include media-query($on-palm) {
+  .about-section {
+    padding: 10vh -webkit-calc(10% + $spacing-unit);
+    padding: 10vh         calc(10% + $spacing-unit);
+  }
+
+  .about-card {
+    margin: 0;
+    padding-top: 0;
+
+    img {
+      width: 60vw;
+      height: auto;
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5vh;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 3vh;
+    }
+
+    p {
+      text-align: justify;
+    }
   }
 }
 
@@ -224,9 +275,13 @@
  */
 
 .home-section {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+
   min-height: 40vh;
-  padding: 10vh -webkit-calc(10% + $spacing-unit);
-  padding: 10vh         calc(10% + $spacing-unit);
+  padding: 10vh -webkit-calc(20% + $spacing-unit);
+  padding: 10vh         calc(20% + $spacing-unit);
 
   &:nth-child(even) {
     background-color: $section-color-medium;
@@ -240,10 +295,6 @@
     font-weight: bold;
     color: $section-text-color;
     @include relative-font-size(2.5);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
-    }
   }
 }
 
@@ -260,10 +311,37 @@
   }
 
   p {
-    &:first-of-type {
-      @include relative-font-size(1.25);
-      font-weight: bold;
+    text-align: justify;
+  }
+
+  #project-link {
+    display: flex;
+    justify-content: center;
+
+    a {
+      @include relative-font-size(1.5);
+      background-color: $link-text-color;
+      border-radius: 8px;
+      color: $section-text-color;
+      padding: 8px 16px;
+      text-align: center;
+      transition: all 400ms ease-out;
+
+      &:hover {
+        background: $link-color-dark;
+      }
     }
+  }
+}
+
+@include media-query($on-palm) {
+  .home-section {
+    padding: 10vh -webkit-calc(10% + $spacing-unit);
+    padding: 10vh         calc(10% + $spacing-unit);
+  }
+
+  .section-card img {
+    padding-bottom: 10px;
   }
 }
 
