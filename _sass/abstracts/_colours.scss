@@ -3,6 +3,7 @@
 $text-color: #111 !default;
 $section-text-color: #EEE !default;
 $link-text-color: #00a470 !default;
+$link-color-dark: color.adjust($link-text-color, $lightness: -12%) !default;
 
 $background-color: #002b43 !default;
 $background-color-light: #d7e2e7 !default;
