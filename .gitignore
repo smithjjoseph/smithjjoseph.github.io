@@ -10,3 +10,6 @@ vendor
 
 # Ruby Gems lockfile
 Gemfile.lock
+
+# TODO list
+TODO.md
