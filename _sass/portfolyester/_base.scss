@@ -110,10 +110,6 @@ a {
   color: $link-text-color;
   text-decoration: none;
 
-  &:visited {
-    color: color.adjust($link-text-color, $lightness: -10%);
-  }
-
   &:hover {
     color: color.adjust($link-text-color, $lightness: 5%);
   }
