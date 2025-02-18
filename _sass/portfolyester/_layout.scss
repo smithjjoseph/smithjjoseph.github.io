@@ -202,6 +202,19 @@
 
 
 /**
+ * Home content
+ */
+
+.home h1 {
+  @include relative-font-size(3);
+  font-weight: bold;
+  font-family: $dm-serif-text;
+  color: $section-text-color;
+}
+
+
+
+/**
  * About content
  */
  
@@ -219,12 +232,6 @@
   color: $section-text-color;
   padding: 2rem 0;
   margin: $spacing-unit 0;
-
-  h1 {
-    font-weight: bold;
-    color: $section-text-color;
-    @include relative-font-size(3);
-  }
 
   img {
     float: left;
@@ -273,7 +280,7 @@
 
 
 /**
- * Home content
+ * Section content
  */
 
 .home-section {
@@ -291,12 +298,6 @@
 
   &:nth-child(odd) {
     background-color: $section-color-dark;
-  }
-
-  h1 {
-    font-weight: bold;
-    color: $section-text-color;
-    @include relative-font-size(3);
   }
 }
 
@@ -465,6 +466,13 @@
   }
 }
 
+@include media-query($on-palm) {
+  .project-section {
+    padding: 10vh -webkit-calc(10% + $spacing-unit);
+    padding: 10vh         calc(10% + $spacing-unit);
+  }
+}
+
 
 
 /**
@@ -473,4 +481,15 @@
 .post {
   padding: 10vh -webkit-calc(20% + $spacing-unit);
   padding: 10vh         calc(20% + $spacing-unit);
+}
+
+.post-content img {
+  padding: 3vh 0;
+}
+
+@include media-query($on-palm) {
+  .post {
+    padding: 10vh -webkit-calc(10% + $spacing-unit);
+    padding: 10vh         calc(10% + $spacing-unit);
+  }
 }
