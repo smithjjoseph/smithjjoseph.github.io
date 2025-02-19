@@ -2,6 +2,7 @@
 layout: post
 title: OpenGL-Graphics
 categories: projects
+github: https://github.com/smithjjoseph/GL-graphics
 permalink: /:categories/:title
 ---
 
