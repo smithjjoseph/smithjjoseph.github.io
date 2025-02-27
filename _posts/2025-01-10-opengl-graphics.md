@@ -2,13 +2,16 @@
 layout: post
 title: OpenGL-Graphics
 categories: projects
+tags: [C, OpenGL, GLSL, GLFW, MinGW, Graphics]
 github: https://github.com/smithjjoseph/GL-graphics
 permalink: /:categories/:title
 ---
 
-This project uses CMake to create a project with [GLFW](https://www.glfw.org/)/[GLAD](https://github.com/Dav1dde/glad) for use with the [OpenGL](https://www.opengl.org/) specification. This project is designed to be multi-platform and runs on most C++ build systems including Windows, Linux and MacOS.
+This project acts as an exploration of graphics programming with OpenGL in C++. This project utilises CMake and MinGW to build a project with [GLFW](https://www.glfw.org/)/[GLAD](https://github.com/Dav1dde/glad) for use with the [OpenGL](https://www.opengl.org/) specification. This project is designed to be multi-platform and runs on most C++ build systems including Windows, Linux and MacOS.
 
-This README acts as a source of information for this project, an instructional for building this project as well as a journal of my learnings over the course of this project.
+<!--end_excerpt-->
+
+This documentation acts as a source of information for this project, an instructional for building this project as well as a journal of my learnings over the course of this project.
 
 Much of this project will follow alongside the extremely helpful teachings at https://learnopengl.com.
 
