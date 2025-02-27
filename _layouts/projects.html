@@ -1,6 +1,6 @@
 ---
 layout: default
-show_excerpts: false
+show_excerpts: true
 ---
 
 <div class="project-section">
@@ -8,7 +8,7 @@ show_excerpts: false
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  <div class="post-content">
+  <div class="project-content">
     {{ content }}
   </div>
 
@@ -20,11 +20,24 @@ show_excerpts: false
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+            {%- if post.display -%}
+              {{ post.display | escape }}
+            {%- else -%}
+              {{ post.title | escape }}
+            {%- endif -%}
           </a>
         </h3>
+        {%- if post.tags -%}
+          <ul class="topic-list">
+            {%- for tag in post.tags -%}
+              <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
         {%- if layout.show_excerpts -%}
-          {{ post.excerpt }}
+          {% assign modified_excerpt = post.excerpt | newline_to_br | strip_newlines | 
+            replace: '<br />', '' | replace: '<p>', '' | replace: '</p>', '' | append: '..' %}
+          <p>{{ modified_excerpt }}</p>
         {%- endif -%}
       </li>
       {%- endfor -%}

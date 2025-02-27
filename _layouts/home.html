@@ -22,7 +22,7 @@ layout: default
         solve real-world problems, and I'm eager to bring my technical expertise and collaborative experience to a 
         dynamic engineering team.
       </p>
-      <a href="/assets/downloads/Joseph_Smith_CV_25_02_18.pdf" download="Joseph_Smith_CV_25_02_18.pdf">
+      <a href="/assets/downloads/Joseph_Smith_CV_25_02_18.pdf" target="_blank">
         <i class="fa fa-download"></i> CV Download
       </a>
     </div>
@@ -31,33 +31,23 @@ layout: default
   <div class="home-section">
     <h1>Projects</h1>
     <div class="section-card">
+      {%- assign graphics_post = site.posts | find: "title", "OpenGL-Graphics" -%}
       <h2>Graphics Programming</h2>
-      <p>An exploration of graphics programming with OpenGL in C++.</p>
+      {{ graphics_post.excerpt }}
       <ul class="topic-list">
-        <li>C++</li>
-        <li>OpenGL</li>
-        <li>GLSL</li>
-        <li>GLFW</li>
-        <li>MinGW</li>
-        <li>Graphics</li>
+        {%- for tag in graphics_post.tags -%}
+          <li>{{ tag }}</li>
+        {%- endfor -%}
       </ul>
     </div>
     <div class="section-card">
+      {%- assign robot_post = site.posts | find: "title", "Methods for Control of a Robotic Hand" -%}
       <h2>Methods for Control of a Robotic Hand</h2>
-      <p>BEng dissertation project involving the use of a 'qb Softhand research' and various methods for its control 
-        including a look at a possible method for a Brain Computer Interface. This project also includes stimuli 
-        animated resources to aid the collection of data for training a model for a BCI.
-      </p>
+      {{ robot_post.excerpt }}
       <ul class="topic-list">
-        <li>Python</li>
-        <li>ROS</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>SVG</li>
-        <li>Computer Vision</li>
-        <li>Machine Learning</li>
-        <li>BCIs</li>
+        {%- for tag in robot_post.tags -%}
+          <li>{{ tag }}</li>
+        {%- endfor -%}
       </ul>
     </div>
     <div class="element-card">
@@ -78,9 +68,9 @@ layout: default
   <div class="home-section">
     <h1>Experience</h1>
     <div class="section-card">
-      <p class="date">Sept 2022 - June 2023</p>
+      <p class="date">Sep 2022 - Jun 2023</p>
       <h2>ITDev</h2>
-      <p>Embedded Systems Intern</p>
+      <h3>Embedded Systems Intern</h3>
       <p>Year-long industry placement as part of the UKESF scholarship.
         Gained valuable experience working on a diverse range of projects helping me to develop both my technical 
         skills and industry knowledge. 
@@ -89,39 +79,39 @@ layout: default
         Involved in a video SDR to HDR IP project, where I applied my skills in Python, C++, and RTL. 
         Received mentoring, guidance, hands-on experience, and valuable exposure to client-facing work.
       </p>
+      {%- assign tags = "Python C++ Bash FFmpeg Jenkins Hardware Testing Linux Scripting CI/CD FPGA Vivado" -%}
+      {%- assign tag_list = tags | split: " " -%}
       <ul class="topic-list">
-        <li>Python</li>
-        <li>C++</li>
-        <li>Bash</li>
-        <li>FFmpeg</li>
-        <li>Jenkins</li>
-        <li>Hardware Testing</li>
-        <li>Linux</li>
-        <li>Scripting</li>
-        <li>CI/CD</li>
-        <li>FPGA</li>
-        <li>Vivado</li>
+        {%- for tag in tag_list -%}
+          <li>{{ tag }}</li>
+        {%- endfor -%}
       </ul>
     </div>
     <div class="section-card">
-      <p class="date">Sept 2018 - Sept 2020</p>
+      <p class="date">Sep 2018 - Sep 2020</p>
       <h2>Jesmond Community Leisure</h2>
-      <p>Casual Lifeguard</p>
+      <h3>Casual Lifeguard</h3>
+      <p>RLSS UK - National Pool Lifeguard Qualification held between Sep 2018 and Sep 2022</p>
     </div>
   </div>
 
   <div class="home-section">
     <h1>Education</h1>
-    <div class="section-card">
-      <img src="assets/images/uoy-light.png" alt="UoY Logo Light">
-      <p class="date">Sept 2020 - July 2024</p>
+    <div class="education-card">
+      <div class="logo-div">
+        <img src="assets/images/uoy-light.png" alt="UoY Logo Light">
+      </div>
+      <p class="date">Sep 2020 - Jul 2024</p>
       <h2>University of York</h2>
       <p>Electronic and Computer Engineering with a year in industry</p>
       <p>Achieved: 2:1</p>
     </div>
-    <div class="section-card">
-      <img src="assets/images/ga-logo.png" alt="GA Logo">
-      <p class="date">Sept 2015 - June 2020</p>
+
+    <div class="education-card">
+      <div class="logo-div">
+        <img src="assets/images/ga-logo.png" alt="GA Logo">
+      </div>
+      <p class="date">Sep 2015 - Jun 2020</p>
       <h2>Gosforth Academy</h2>
       <p>A-Levels: Computer Science, Physics, Mathematics</p>
     </div>
