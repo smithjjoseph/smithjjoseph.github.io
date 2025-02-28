@@ -129,7 +129,7 @@ In order to collect the EEG data that would later be analysed, stimuli videos fi
 ### Visual Evoked Potential (VEP test)
 VEP is a common EEG test used to assess the condition and latency of the neural pathways between the optical nerve and the visual cortex in the occipital lobe at the back of the brain. For the purposes of this project, the test is intended as a control to ensure that the EEG data collected is of a high enough quality. The test consists of a black and white checkered pattern that continuously alternates colours with a stationary red dot in the middle, at which the participant is instructed to look. 
 
-![Image of VEP test video]({{site.baseurl}}/assets/images/...){: width="...%"}
+![Image of VEP test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/vep.png){: width="100%"}
 *Figure 7: Two frames of the VEP test video*
 
 The creation of this effect involves the use of 2x2 grids of alternating black and white squares generated using the SVG pattern feature. A jQuery function is used to check each square's colour and switches it to the opposite colour. JavaScript's `setInterval` function is used to ensure that the wait between each interval is constant (the default for this test is set to 1.5s). Due to the simplicity and concision of the jQuery code for this test, it is stored directly in the HTML file rather than in a separate JavaScript file.
@@ -137,12 +137,12 @@ The creation of this effect involves the use of 2x2 grids of alternating black a
 ### Continuous Hand Control Stimulus
 As part of the hand control for this project, a standardised test was needed for collecting EEG data related to the continuous movement of the hand. The test consists of an animation where a blue square's outline is enclosed by another blue square's outline. Once the two outlines meet, the square is filled in with blue. After a short pause, a similar process occurs with a red circle, and this sequence loops indefinitely.
 
-![Image of continuous hand control test video]({{site.baseurl}}/assets/images/...){: width="...%"}
+![Image of continuous hand control test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/continuous.png){: width="80%"}
 *Figure 8: Four example frames from the continuous hand control test video*
 
 Participants are instructed to rest their hand palm up on a table in front of them. They are then to gradually close their hands as the outer red circle closes in, ensuring their hand is fully closed when the red circle fills. Conversely, they open their hand gradually as the outer blue square closes in, having their hands fully open by the time the blue square fills. Using both shape and colour differentiators allows the test to be accessible even to those with colour blindness and helps with association of a visual stimuli to a movement. The hope would be that this would trigger a response in both the visual and motor cortex.
 
-![Image of FSM for continuous hand control test video]({{site.baseurl}}/assets/images/...){: width="...%"}
+![Image of FSM for continuous hand control test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/continuous_fsm.png){: width="40%"}
 *Figure 9: FSM for continuous hand control test video*
 
 The animation is implemented as a series of stages which are selected sequentially using a switch-case block operating like a finite state machine as can be seen in fig. 11. Each time a stage is completed the stage counter is incremented. A full cycle through this switch-case block represents a complete loop of the animation. To manage the wait functionality, a global count incrementing every frame is used since JavaScript's setTimeout function does not block script execution, which would otherwise cause the animation to continue running during intended pauses.
@@ -152,21 +152,15 @@ General functions for show element, hide element, fill element, and empty elemen
 ### Gradual Hand Control Stimulus
 Since it was uncertain if continuous movement would be optimal for later EEG data analysis, a test video for the gradual movement of the hand was also created. This test features a number in the centre of the screen that counts up, with the word "ready" appearing on the left-hand side before each increment to prepare the participant for the next movement.
 
-![Image of gradual hand control test video]({{site.baseurl}}/assets/images/...){: width="...%"}
+![Image of gradual hand control test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/gradual.png){: width="80%"}
 *Figure 10: Example of frames from the gradual hand control test video*
 
 Participants are instructed to place the back of their hand once again on the table but this time in a closed fist. They are to associate each number being shown with a level of hand openness, with 0 being their hand in a closed fist and 5 being an open palmed hand. The animation for this test is implemented as a series of stages or 'slides', similar to the continuous hand control test the switch-case block can be visualised as a finite state machine seen in fig. 13.
 
-![Image of FSM for gradual hand control test video]({{site.baseurl}}/assets/images/...){: width="...%"}
+![Image of FSM for gradual hand control test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/gradual_fsm.png){: width="40%"}
 *Figure 11: FSM for gradual hand control test video*
 
 The code for this test is simpler than that of the continuous hand control test, requiring only show and hide element functions along with the same aforementioned global wait function. Unlike the continuous hand control test, a full loop through the switch-case statement in this test does not represent a complete cycle of the animation but rather the code necessary to increment and display a single number.
-
-### Index Screen
-For ease of manoeuvrability between all the tests, videos pages were integrated into a homepage. A global CSS file was used for all test videos, providing styling for the animated buttons on the index screen and a body style that removed any margin, ensuring the SVG displayed properly in the centre of the screen and appeared to occupy the entire screen.
-
-![Image of test video index page]({{site.baseurl}}/assets/images/...){: width="...%"}
-*Figure 12: Index page for all test videos*
 
 # References
 [1] University of York, “Code of practice and principles for good ethical governance,” 10 May 2022. [Online]. Available: https://www.york.ac.uk/staff/research/governance/research-policies/ethics-code/. [Accessed 13 May 2024].
