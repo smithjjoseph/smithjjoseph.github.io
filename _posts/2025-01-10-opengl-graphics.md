@@ -2,7 +2,7 @@
 layout: post
 title: OpenGL-Graphics
 categories: projects
-tags: [C, OpenGL, GLSL, GLFW, MinGW, Graphics]
+tags: [C++, OpenGL, GLSL, GLFW, MinGW, Graphics]
 github: https://github.com/smithjjoseph/GL-graphics
 permalink: /:categories/:title
 ---

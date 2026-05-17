@@ -18,7 +18,7 @@ BEng dissertation project involving the use of a 'qb Softhand research' and vari
 Robotic analogues for human limbs can be seen in use in fields including manufacturing and prosthetics. Methods for controlling prostheses vary based on use-case however a particularly interesting technology is neuroprosthesis which makes use of cortical signals to control the movement of robotic limbs. This extraction and analysis of signals is known as a Brain Computer Interface (BCI) and is the main mechanism for enabling movement. This project aimed to implement and assess the use of EEG signals as well as computer vision models for hand movement and face movement to control a robotic hand. In this project a system is produced allowing for the use of multiple computer vision models to control a robotic hand. It was found that the implementation of computer vision models created, was too slow to be used effectively for prostheses, however the results of the models were precise enough. Due to hardware obtainment limitations the EEG portion of this project was not possible. It is hoped that this work can be continued in order to make a full implementation of the EEG portion of the project. Future work could also work on further increasing the precision of results and reducing any shakiness.
 
 # Introduction
-The primary aim for this project is to create multiple systems for the control of a robotic hand and then analyse their efficacy. This project aims to consider the effectiveness of each system in real-world use cases such as prosthetics and industrial applications. This title and aim of this project have changed since it was started. The original name for this project was ‘Robotic Hand Control using EEGs' however this was changed at late point in the project once it was found that there would be issues using the hardware. At this point a contingency plan was launched which involved the use of computer vision as a means for control rather than EEG signals. This contingency plan included the control of the robotic hand using computer vision for hand mimicking and facial emotion.
+The primary aim for this project is to create multiple systems for the control of a robotic hand and then analyse their efficacy. This project aims to consider the effectiveness of each system in real-world use cases such as prosthetics and industrial applications. This title and aim of this project have changed since it was started. The original name for this project was 'Robotic Hand Control using EEGs' however this was changed at late point in the project once it was found that there would be issues using the hardware. At this point a contingency plan was launched which involved the use of computer vision as a means for control rather than EEG signals. This contingency plan included the control of the robotic hand using computer vision for hand mimicking and facial emotion.
 
 # Background
 ## Computer Vision
@@ -127,7 +127,7 @@ An advantage of this method includes the fact that it doesn't require the moveme
 In order to collect the EEG data that would later be analysed, stimuli videos first needed to be created. This was the first module developed in the project, prior to gaining access to the SoftHand and before any contingencies were established. 3 videos each designed to test for specific brain responses were created by making looping animations using HTML, CSS, JavaScript/jQuery, and SVG. These animations were programmatically generated to enable quick creation of precise shapes and patterns, easily facilitate timing adjustments, and allow dynamic resizing of the SVG canvas for various screen sizes. The SVG images were designed to be displayed optimally on multiples of 1080p, which is the most common resolution for PCs [10].
 
 ### Visual Evoked Potential (VEP test)
-VEP is a common EEG test used to assess the condition and latency of the neural pathways between the optical nerve and the visual cortex in the occipital lobe at the back of the brain. For the purposes of this project, the test is intended as a control to ensure that the EEG data collected is of a high enough quality. The test consists of a black and white checkered pattern that continuously alternates colours with a stationary red dot in the middle, at which the participant is instructed to look. 
+VEP is a common EEG test used to assess the condition and latency of the neural pathways between the optical nerve and the visual cortex in the occipital lobe at the back of the brain. For the purposes of this project, the test is intended as a control to ensure that the EEG data collected is of a high enough quality. The test consists of a black and white checkered pattern that continuously alternates colours with a stationary red dot in the middle, at which the participant is instructed to look.
 
 ![Image of VEP test video]({{site.baseurl}}/assets/images/posts/{{page.title}}/vep.png){: width="100%"}
 *Figure 7: Two frames of the VEP test video*
@@ -163,24 +163,24 @@ Participants are instructed to place the back of their hand once again on the ta
 The code for this test is simpler than that of the continuous hand control test, requiring only show and hide element functions along with the same aforementioned global wait function. Unlike the continuous hand control test, a full loop through the switch-case statement in this test does not represent a complete cycle of the animation but rather the code necessary to increment and display a single number.
 
 # References
-[1] University of York, “Code of practice and principles for good ethical governance,” 10 May 2022. [Online]. Available: https://www.york.ac.uk/staff/research/governance/research-policies/ethics-code/. [Accessed 13 May 2024].
+[1] University of York, "Code of practice and principles for good ethical governance," 10 May 2022. [Online]. Available: https://www.york.ac.uk/staff/research/governance/research-policies/ethics-code/. [Accessed 13 May 2024].
 
-[2] IBM, “What is computer vision?,” [Online]. Available: https://www.ibm.com/topics/computer-vision. [Accessed 20 May 2024].
+[2] IBM, "What is computer vision?," [Online]. Available: https://www.ibm.com/topics/computer-vision. [Accessed 20 May 2024].
 
-[3] W. Omerod, “Richard Caton (1842–1926): pioneer electrophysiologist and cardiologist,” Journal of Medical Biography, vol. 14, no. 1, pp. 30-35, 2006. 
+[3] W. Omerod, "Richard Caton (1842-1926): pioneer electrophysiologist and cardiologist," Journal of Medical Biography, vol. 14, no. 1, pp. 30-35, 2006.
 
-[4] L. F. Haas, “Hans Berger (1873–1941), Richard Caton (1842–1926), and electroencephalography,” Journal of Neurology, Neurosurgery, and Psychiatry, p. 9, 2003. 
+[4] L. F. Haas, "Hans Berger (1873-1941), Richard Caton (1842-1926), and electroencephalography," Journal of Neurology, Neurosurgery, and Psychiatry, p. 9, 2003.
 
-[5] C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays, F. Zhang, C. Chuo-Ling, M. Yong, J. Lee, C. Wan-Teh, W. Hua, M. Georg and M. Grundmann, “MediaPipe: A Framework for Perceiving and Processing Reality,” in Third Workshop on Computer Vision for AR/VR at IEEE Computer Vision and Pattern Recognition (CVPR) 2019, CVPR, 2019. 
+[5] C. Lugaresi, J. Tang, H. Nash, C. McClanahan, E. Uboweja, M. Hays, F. Zhang, C. Chuo-Ling, M. Yong, J. Lee, C. Wan-Teh, W. Hua, M. Georg and M. Grundmann, "MediaPipe: A Framework for Perceiving and Processing Reality," in Third Workshop on Computer Vision for AR/VR at IEEE Computer Vision and Pattern Recognition (CVPR) 2019, CVPR, 2019.
 
-[6] computervisioneng, “Creating an Emotion Recognition Synthetic Dataset with Python & Stable Diffusion,” 25 January 2024. [Online]. Available: https://github.com/computervisioneng/create-synthetic-dataset-emotion-recognition/. [Accessed 20 May 2024].
+[6] computervisioneng, "Creating an Emotion Recognition Synthetic Dataset with Python & Stable Diffusion," 25 January 2024. [Online]. Available: https://github.com/computervisioneng/create-synthetic-dataset-emotion-recognition/. [Accessed 20 May 2024].
 
-[7] computervisioneng, “emotion-recognition-python-scikit-learn-mediapipe,” 31 January 2024. [Online]. Available: https://github.com/computervisioneng/emotion-recognition-python-scikit-learn-mediapipe/. [Accessed 20 May 2024].
+[7] computervisioneng, "emotion-recognition-python-scikit-learn-mediapipe," 31 January 2024. [Online]. Available: https://github.com/computervisioneng/emotion-recognition-python-scikit-learn-mediapipe/. [Accessed 20 May 2024].
 
-[8] scikit-learn, “1.10. Decision Trees — scikit-learn 1.4.2 documentation,” [Online]. Available: https://scikit-learn.org/stable/modules/tree.html. [Accessed 20 05 2024].
+[8] scikit-learn, "1.10. Decision Trees — scikit-learn 1.4.2 documentation," [Online]. Available: https://scikit-learn.org/stable/modules/tree.html. [Accessed 20 05 2024].
 
-[9] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot and E. Duchesnay, “Scikit-learn: Machine Learning in Python,” Journal of Machine Learning Research, vol. 12, pp. 2825-2830, 2011. 
+[9] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot and E. Duchesnay, "Scikit-learn: Machine Learning in Python," Journal of Machine Learning Research, vol. 12, pp. 2825-2830, 2011.
 
-[10] StatCounter, “Desktop Screen Resolution Stats Worldwide,” April 2024. [Online]. Available: https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide. [Accessed 20 May 2024].
+[10] StatCounter, "Desktop Screen Resolution Stats Worldwide," April 2024. [Online]. Available: https://gs.statcounter.com/screen-resolution-stats/desktop/worldwide. [Accessed 20 May 2024].
 
 
