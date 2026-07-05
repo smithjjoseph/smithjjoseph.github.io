@@ -1,0 +1,52 @@
+---
+layout: default
+show_descriptions: true
+---
+
+<div class="project-section">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  <!-- {%- if site.tools.size > 0 -%}
+  <p>HELLO THERE</p>
+  {%- endif -%}
+
+  {% for tool in site.tools %}
+    <h2>{{ tool.title }}</h2>
+    <p>{{ tool.description }}</p>
+    <a href="{{ tool.tool_path }}">Open tool</a>
+  {% endfor %} -->
+
+  {%- if site.tools.size > 0 -%}
+    <ul class="post-list">
+      {%- for tool in site.tools -%}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ tool.url | relative_url }}">
+            {%- if tool.display -%}
+              {{ tool.display | escape }}
+            {%- else -%}
+              {{ tool.title | escape }}
+            {%- endif -%}
+          </a>
+        </h3>
+        {%- if tool.tags -%}
+          <ul class="topic-list">
+            {%- for tag in tool.tags -%}
+              <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if layout.show_descriptions -%}
+          <p>{{ tool.description }}</p>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>

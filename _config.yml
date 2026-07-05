@@ -32,12 +32,18 @@ github_username:  smithjjoseph
 plugins:
   - jekyll-seo-tag
 
-# Create front matter for images
+# Add liquid variable for tools
+collections:
+  tools:
+    output: false
+
 defaults:
+  # Create front matter for images
   - scope:
       path: "assets/images"
     values:
       image: true
+  # Create front matter for excerpts
   - scope:
       path: "_posts"
     values:
