@@ -4,4 +4,4 @@ title: Tools
 permalink: /tools/
 ---
 
-Useful tools for debugging and development
+Useful tools for debugging and development:
